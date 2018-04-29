@@ -40,9 +40,6 @@ numImages = 299;
 worldPoints2D = [0,0; 0,5; 7,5; 7,2.5; 7,0];
 worldPoints = [worldPoints2D, zeros(size(worldPoints2D,1),1)];
 
-
-
-
 [verts, faces, ~] = teapotGeometry;
 verts(:,1) = verts(:,1) + 2;
 verts(:,2) = verts(:,2) + 2;
@@ -103,8 +100,6 @@ for n = 1:numImages
     drawTeapot2(teapotSides, teapotMean, im, cameraParams,R,t)
     
     M(count) = getframe; 
-    g{count} = frame2im(M(count));
-
     count = count+1;
 end
 toc
